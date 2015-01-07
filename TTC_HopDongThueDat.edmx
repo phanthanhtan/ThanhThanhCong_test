@@ -33,6 +33,12 @@
           <Property Name="MoiQuanHeB" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="DiaChi_B2" Type="nvarchar" Nullable="false" MaxLength="500" />
           <Property Name="SDT_B2" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="KiemSoatVien" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="SoVu" Type="int" Nullable="false" />
+          <Property Name="TuVu" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DonGiaThue" Type="float" Nullable="false" />
+          <Property Name="TongTien" Type="float" Nullable="false" />
+          <Property Name="UngTruoc" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="HopDong_ChiTiet">
           <Key>
@@ -52,7 +58,7 @@
             <PropertyRef Name="MaVung" />
           </Key>
           <Property Name="MaVung" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="TenVung" Type="nvarchar" MaxLength="50" />
+          <Property Name="TenVung" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
       </Schema>
     </edmx:StorageModels>
@@ -87,6 +93,12 @@
           <Property Name="MoiQuanHeB" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="DiaChi_B2" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
           <Property Name="SDT_B2" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="KiemSoatVien" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="SoVu" Type="Int32" Nullable="false" />
+          <Property Name="TuVu" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DonGiaThue" Type="Double" Nullable="false" />
+          <Property Name="TongTien" Type="Double" Nullable="false" />
+          <Property Name="UngTruoc" Type="Double" Nullable="false" />
         </EntityType>
         <EntityType Name="HopDong_ChiTiet">
           <Key>
@@ -106,7 +118,7 @@
             <PropertyRef Name="MaVung" />
           </Key>
           <Property Name="MaVung" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="TenVung" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TenVung" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -136,6 +148,12 @@
                 <ScalarProperty Name="MoiQuanHeB" ColumnName="MoiQuanHeB" />
                 <ScalarProperty Name="DiaChi_B2" ColumnName="DiaChi_B2" />
                 <ScalarProperty Name="SDT_B2" ColumnName="SDT_B2" />
+                <ScalarProperty Name="KiemSoatVien" ColumnName="KiemSoatVien" />
+                <ScalarProperty Name="SoVu" ColumnName="SoVu" />
+                <ScalarProperty Name="TuVu" ColumnName="TuVu" />
+                <ScalarProperty Name="DonGiaThue" ColumnName="DonGiaThue" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+                <ScalarProperty Name="UngTruoc" ColumnName="UngTruoc" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

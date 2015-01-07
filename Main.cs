@@ -42,7 +42,16 @@ namespace ThanhThanhCong_test
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
+            frmHopDong_ChiTiet frm = new frmHopDong_ChiTiet();
+            this.Visible = false;
+            frm.Visible = true;
+        }
 
+        private void btn_DanhSachHopDong_Click(object sender, EventArgs e)
+        {
+            frmHopDong frm = new frmHopDong();
+            this.Visible = false;
+            frm.Visible = true;
         }
     }
 }

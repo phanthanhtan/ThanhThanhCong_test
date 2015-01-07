@@ -23,6 +23,12 @@
           <ScalarProperty Name="MoiQuanHeB" ColumnName="MoiQuanHeB" />
           <ScalarProperty Name="DiaChi_B2" ColumnName="DiaChi_B2" />
           <ScalarProperty Name="SDT_B2" ColumnName="SDT_B2" />
+          <ScalarProperty Name="KiemSoatVien" ColumnName="KiemSoatVien" />
+          <ScalarProperty Name="SoVu" ColumnName="SoVu" />
+          <ScalarProperty Name="TuVu" ColumnName="TuVu" />
+          <ScalarProperty Name="DonGiaThue" ColumnName="DonGiaThue" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+          <ScalarProperty Name="UngTruoc" ColumnName="UngTruoc" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

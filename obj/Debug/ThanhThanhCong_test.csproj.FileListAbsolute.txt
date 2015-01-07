@@ -11,3 +11,5 @@ F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\bin\Debug\EntityFram
 F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\bin\Debug\EntityFramework.xml
 F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\obj\Debug\ThanhThanhCong_test.exe
 F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\obj\Debug\ThanhThanhCong_test.pdb
+F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\obj\Debug\ThanhThanhCong_test.frmHopDong.resources
+F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\obj\Debug\ThanhThanhCong_test.frmHopDong_ChiTiet.resources

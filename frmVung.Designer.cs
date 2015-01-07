@@ -46,6 +46,8 @@
             // 
             // dataGridView_Vung
             // 
+            this.dataGridView_Vung.AllowUserToAddRows = false;
+            this.dataGridView_Vung.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_Vung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Vung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaVung,
@@ -71,7 +73,6 @@
             this.TenVung.HeaderText = "Tên vùng";
             this.TenVung.Name = "TenVung";
             this.TenVung.ReadOnly = true;
-            this.TenVung.Width = 150;
             // 
             // label1
             // 
@@ -114,6 +115,7 @@
             // 
             this.txt_MaVung.BackColor = System.Drawing.SystemColors.Window;
             this.txt_MaVung.Location = new System.Drawing.Point(351, 94);
+            this.txt_MaVung.MaxLength = 50;
             this.txt_MaVung.Name = "txt_MaVung";
             this.txt_MaVung.ReadOnly = true;
             this.txt_MaVung.Size = new System.Drawing.Size(100, 20);
@@ -122,6 +124,7 @@
             // txt_TenVung
             // 
             this.txt_TenVung.Location = new System.Drawing.Point(351, 120);
+            this.txt_TenVung.MaxLength = 50;
             this.txt_TenVung.Name = "txt_TenVung";
             this.txt_TenVung.Size = new System.Drawing.Size(100, 20);
             this.txt_TenVung.TabIndex = 5;

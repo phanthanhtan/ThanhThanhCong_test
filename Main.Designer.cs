@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btn_Them = new System.Windows.Forms.Button();
-            this.btn_DanhSach = new System.Windows.Forms.Button();
+            this.btn_DanhSachHopDong = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.btn_Vung = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -44,14 +44,15 @@
             this.btn_Them.UseVisualStyleBackColor = true;
             this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
-            // btn_DanhSach
+            // btn_DanhSachHopDong
             // 
-            this.btn_DanhSach.Location = new System.Drawing.Point(72, 94);
-            this.btn_DanhSach.Name = "btn_DanhSach";
-            this.btn_DanhSach.Size = new System.Drawing.Size(139, 23);
-            this.btn_DanhSach.TabIndex = 1;
-            this.btn_DanhSach.Text = "Danh sách hợp đồng";
-            this.btn_DanhSach.UseVisualStyleBackColor = true;
+            this.btn_DanhSachHopDong.Location = new System.Drawing.Point(72, 94);
+            this.btn_DanhSachHopDong.Name = "btn_DanhSachHopDong";
+            this.btn_DanhSachHopDong.Size = new System.Drawing.Size(139, 23);
+            this.btn_DanhSachHopDong.TabIndex = 1;
+            this.btn_DanhSachHopDong.Text = "Danh sách hợp đồng";
+            this.btn_DanhSachHopDong.UseVisualStyleBackColor = true;
+            this.btn_DanhSachHopDong.Click += new System.EventHandler(this.btn_DanhSachHopDong_Click);
             // 
             // btn_Thoat
             // 
@@ -80,7 +81,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.btn_Vung);
             this.Controls.Add(this.btn_Thoat);
-            this.Controls.Add(this.btn_DanhSach);
+            this.Controls.Add(this.btn_DanhSachHopDong);
             this.Controls.Add(this.btn_Them);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -92,7 +93,7 @@
         #endregion
 
         private System.Windows.Forms.Button btn_Them;
-        private System.Windows.Forms.Button btn_DanhSach;
+        private System.Windows.Forms.Button btn_DanhSachHopDong;
         private System.Windows.Forms.Button btn_Thoat;
         private System.Windows.Forms.Button btn_Vung;
     }

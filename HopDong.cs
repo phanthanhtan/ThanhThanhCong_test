@@ -33,5 +33,11 @@ namespace ThanhThanhCong_test
         public string MoiQuanHeB { get; set; }
         public string DiaChi_B2 { get; set; }
         public string SDT_B2 { get; set; }
+        public string KiemSoatVien { get; set; }
+        public int SoVu { get; set; }
+        public string TuVu { get; set; }
+        public double DonGiaThue { get; set; }
+        public double TongTien { get; set; }
+        public double UngTruoc { get; set; }
     }
 }

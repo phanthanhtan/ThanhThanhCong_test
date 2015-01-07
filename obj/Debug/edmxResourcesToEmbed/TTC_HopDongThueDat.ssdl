@@ -28,6 +28,12 @@
     <Property Name="MoiQuanHeB" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="DiaChi_B2" Type="nvarchar" Nullable="false" MaxLength="500" />
     <Property Name="SDT_B2" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="KiemSoatVien" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="SoVu" Type="int" Nullable="false" />
+    <Property Name="TuVu" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DonGiaThue" Type="float" Nullable="false" />
+    <Property Name="TongTien" Type="float" Nullable="false" />
+    <Property Name="UngTruoc" Type="float" Nullable="false" />
   </EntityType>
   <EntityType Name="HopDong_ChiTiet">
     <Key>
@@ -47,6 +53,6 @@
       <PropertyRef Name="MaVung" />
     </Key>
     <Property Name="MaVung" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="TenVung" Type="nvarchar" MaxLength="50" />
+    <Property Name="TenVung" Type="nvarchar" Nullable="false" MaxLength="50" />
   </EntityType>
 </Schema>

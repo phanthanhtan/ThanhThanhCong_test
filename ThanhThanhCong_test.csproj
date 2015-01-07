@@ -51,6 +51,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHopDong.Designer.cs">
+      <DependentUpon>frmHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHopDong_ChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHopDong_ChiTiet.Designer.cs">
+      <DependentUpon>frmHopDong_ChiTiet.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +101,12 @@
     <Compile Include="Vung.cs">
       <DependentUpon>TTC_HopDongThueDat.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmHopDong.resx">
+      <DependentUpon>frmHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHopDong_ChiTiet.resx">
+      <DependentUpon>frmHopDong_ChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmVung.resx">
       <DependentUpon>frmVung.cs</DependentUpon>
     </EmbeddedResource>
