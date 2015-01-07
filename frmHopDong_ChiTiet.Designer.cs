@@ -92,7 +92,7 @@
             this.btn_Luu = new System.Windows.Forms.Button();
             this.btn_Huy = new System.Windows.Forms.Button();
             this.btn_in = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_MaHopDong = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
@@ -695,13 +695,13 @@
             this.btn_in.Text = "in hợp đồng";
             this.btn_in.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txt_MaHopDong
             // 
-            this.textBox2.Location = new System.Drawing.Point(127, 532);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 73;
-            this.textBox2.Visible = false;
+            this.txt_MaHopDong.Location = new System.Drawing.Point(127, 532);
+            this.txt_MaHopDong.Name = "txt_MaHopDong";
+            this.txt_MaHopDong.Size = new System.Drawing.Size(100, 20);
+            this.txt_MaHopDong.TabIndex = 73;
+            this.txt_MaHopDong.Visible = false;
             // 
             // label31
             // 
@@ -792,7 +792,7 @@
             this.Controls.Add(this.label33);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.label31);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_MaHopDong);
             this.Controls.Add(this.btn_in);
             this.Controls.Add(this.btn_Huy);
             this.Controls.Add(this.btn_Luu);
@@ -931,7 +931,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaVung;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenVung;
         private System.Windows.Forms.Button btn_in;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_MaHopDong;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;

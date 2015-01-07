@@ -85,7 +85,7 @@
             this.Controls.Add(this.btn_Them);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý - Hợp đồng thuê đất";
+            this.Text = "Quản lý - Hợp đồng";
             this.ResumeLayout(false);
 
         }
