@@ -1,0 +1,2 @@
+F:\DCT\ThanhThanhCong_test\ThanhThanhCong_test\bin\Debug\ThanhThanhCong_test.exe.config
+F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\bin\Debug\ThanhThanhCong_test.exe.config
