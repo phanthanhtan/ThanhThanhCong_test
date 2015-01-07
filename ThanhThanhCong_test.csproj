@@ -32,8 +32,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,16 +51,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmVung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmVung.Designer.cs">
+      <DependentUpon>frmVung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HopDong.cs">
+      <DependentUpon>TTC_HopDongThueDat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HopDong_ChiTiet.cs">
+      <DependentUpon>TTC_HopDongThueDat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="TTC_HopDongThueDat.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TTC_HopDongThueDat.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TTC_HopDongThueDat.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TTC_HopDongThueDat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TTC_HopDongThueDat.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TTC_HopDongThueDat.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Vung.cs">
+      <DependentUpon>TTC_HopDongThueDat.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmVung.resx">
+      <DependentUpon>frmVung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -64,6 +104,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -73,9 +114,29 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="TTC_HopDongThueDat.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TTC_HopDongThueDat.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="TTC_HopDongThueDat.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TTC_HopDongThueDat.edmx</DependentUpon>
+      <LastGenOutput>TTC_HopDongThueDat.Context.cs</LastGenOutput>
+    </None>
+    <None Include="TTC_HopDongThueDat.edmx.diagram">
+      <DependentUpon>TTC_HopDongThueDat.edmx</DependentUpon>
+    </None>
+    <None Include="TTC_HopDongThueDat.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TTC_HopDongThueDat.edmx</DependentUpon>
+      <LastGenOutput>TTC_HopDongThueDat.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

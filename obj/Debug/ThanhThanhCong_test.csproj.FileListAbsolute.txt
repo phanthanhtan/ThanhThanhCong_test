@@ -1,2 +1,13 @@
 F:\DCT\ThanhThanhCong_test\ThanhThanhCong_test\bin\Debug\ThanhThanhCong_test.exe.config
 F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\bin\Debug\ThanhThanhCong_test.exe.config
+F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\obj\Debug\ThanhThanhCong_test.csprojResolveAssemblyReference.cache
+F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\obj\Debug\ThanhThanhCong_test.frmVung.resources
+F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\obj\Debug\ThanhThanhCong_test.Main.resources
+F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\obj\Debug\ThanhThanhCong_test.Properties.Resources.resources
+F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\obj\Debug\ThanhThanhCong_test.csproj.GenerateResource.Cache
+F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\bin\Debug\ThanhThanhCong_test.exe
+F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\bin\Debug\ThanhThanhCong_test.pdb
+F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\bin\Debug\EntityFramework.dll
+F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\bin\Debug\EntityFramework.xml
+F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\obj\Debug\ThanhThanhCong_test.exe
+F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\obj\Debug\ThanhThanhCong_test.pdb

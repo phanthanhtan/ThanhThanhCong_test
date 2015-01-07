@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TTC_HopDongThueDatModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="TTC_HopDongThueDatModelStoreContainer">
+          <EntitySet Name="HopDong" EntityType="TTC_HopDongThueDatModel.Store.HopDong" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HopDong_ChiTiet" EntityType="TTC_HopDongThueDatModel.Store.HopDong_ChiTiet" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Vung" EntityType="TTC_HopDongThueDatModel.Store.Vung" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="HopDong">
+          <Key>
+            <PropertyRef Name="MaHopDong" />
+          </Key>
+          <Property Name="MaHopDong" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HoTen_A1" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="CMND_A1" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DiaChi_A1" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="SDT_A1" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="HoTen_A2" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="CMND_A2" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MoiQuanHeA" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DiaChi_A2" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="SDT_A2" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="HoTen_B1" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="CMND_B1" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DiaChi_B1" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="SDT_B1" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="HoTen_B2" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="CMND_B2" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MoiQuanHeB" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DiaChi_B2" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="SDT_B2" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="HopDong_ChiTiet">
+          <Key>
+            <PropertyRef Name="MaHopDong_ChiTiet" />
+          </Key>
+          <Property Name="MaHopDong_ChiTiet" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaHopDong" Type="int" Nullable="false" />
+          <Property Name="MaVung" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SoThua" Type="int" Nullable="false" />
+          <Property Name="DienTich" Type="float" Nullable="false" />
+          <Property Name="ViTriDat" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="LoaiDat" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TinhTrangDat" Type="nvarchar" Nullable="false" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Vung">
+          <Key>
+            <PropertyRef Name="MaVung" />
+          </Key>
+          <Property Name="MaVung" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TenVung" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TTC_HopDongThueDatModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TTC_HopDongThueDatEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="HopDong" EntityType="TTC_HopDongThueDatModel.HopDong" />
+          <EntitySet Name="HopDong_ChiTiet" EntityType="TTC_HopDongThueDatModel.HopDong_ChiTiet" />
+          <EntitySet Name="Vung" EntityType="TTC_HopDongThueDatModel.Vung" />
+        </EntityContainer>
+        <EntityType Name="HopDong">
+          <Key>
+            <PropertyRef Name="MaHopDong" />
+          </Key>
+          <Property Name="MaHopDong" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="HoTen_A1" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CMND_A1" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiaChi_A1" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="SDT_A1" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="HoTen_A2" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CMND_A2" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MoiQuanHeA" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiaChi_A2" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="SDT_A2" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="HoTen_B1" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CMND_B1" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiaChi_B1" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="SDT_B1" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="HoTen_B2" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CMND_B2" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MoiQuanHeB" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiaChi_B2" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="SDT_B2" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="HopDong_ChiTiet">
+          <Key>
+            <PropertyRef Name="MaHopDong_ChiTiet" />
+          </Key>
+          <Property Name="MaHopDong_ChiTiet" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaHopDong" Type="Int32" Nullable="false" />
+          <Property Name="MaVung" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SoThua" Type="Int32" Nullable="false" />
+          <Property Name="DienTich" Type="Double" Nullable="false" />
+          <Property Name="ViTriDat" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="LoaiDat" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TinhTrangDat" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Vung">
+          <Key>
+            <PropertyRef Name="MaVung" />
+          </Key>
+          <Property Name="MaVung" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TenVung" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TTC_HopDongThueDatModelStoreContainer" CdmEntityContainer="TTC_HopDongThueDatEntities">
+          <EntitySetMapping Name="HopDong">
+            <EntityTypeMapping TypeName="TTC_HopDongThueDatModel.HopDong">
+              <MappingFragment StoreEntitySet="HopDong">
+                <ScalarProperty Name="MaHopDong" ColumnName="MaHopDong" />
+                <ScalarProperty Name="HoTen_A1" ColumnName="HoTen_A1" />
+                <ScalarProperty Name="CMND_A1" ColumnName="CMND_A1" />
+                <ScalarProperty Name="DiaChi_A1" ColumnName="DiaChi_A1" />
+                <ScalarProperty Name="SDT_A1" ColumnName="SDT_A1" />
+                <ScalarProperty Name="HoTen_A2" ColumnName="HoTen_A2" />
+                <ScalarProperty Name="CMND_A2" ColumnName="CMND_A2" />
+                <ScalarProperty Name="MoiQuanHeA" ColumnName="MoiQuanHeA" />
+                <ScalarProperty Name="DiaChi_A2" ColumnName="DiaChi_A2" />
+                <ScalarProperty Name="SDT_A2" ColumnName="SDT_A2" />
+                <ScalarProperty Name="HoTen_B1" ColumnName="HoTen_B1" />
+                <ScalarProperty Name="CMND_B1" ColumnName="CMND_B1" />
+                <ScalarProperty Name="DiaChi_B1" ColumnName="DiaChi_B1" />
+                <ScalarProperty Name="SDT_B1" ColumnName="SDT_B1" />
+                <ScalarProperty Name="HoTen_B2" ColumnName="HoTen_B2" />
+                <ScalarProperty Name="CMND_B2" ColumnName="CMND_B2" />
+                <ScalarProperty Name="MoiQuanHeB" ColumnName="MoiQuanHeB" />
+                <ScalarProperty Name="DiaChi_B2" ColumnName="DiaChi_B2" />
+                <ScalarProperty Name="SDT_B2" ColumnName="SDT_B2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HopDong_ChiTiet">
+            <EntityTypeMapping TypeName="TTC_HopDongThueDatModel.HopDong_ChiTiet">
+              <MappingFragment StoreEntitySet="HopDong_ChiTiet">
+                <ScalarProperty Name="MaHopDong_ChiTiet" ColumnName="MaHopDong_ChiTiet" />
+                <ScalarProperty Name="MaHopDong" ColumnName="MaHopDong" />
+                <ScalarProperty Name="MaVung" ColumnName="MaVung" />
+                <ScalarProperty Name="SoThua" ColumnName="SoThua" />
+                <ScalarProperty Name="DienTich" ColumnName="DienTich" />
+                <ScalarProperty Name="ViTriDat" ColumnName="ViTriDat" />
+                <ScalarProperty Name="LoaiDat" ColumnName="LoaiDat" />
+                <ScalarProperty Name="TinhTrangDat" ColumnName="TinhTrangDat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vung">
+            <EntityTypeMapping TypeName="TTC_HopDongThueDatModel.Vung">
+              <MappingFragment StoreEntitySet="Vung">
+                <ScalarProperty Name="MaVung" ColumnName="MaVung" />
+                <ScalarProperty Name="TenVung" ColumnName="TenVung" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

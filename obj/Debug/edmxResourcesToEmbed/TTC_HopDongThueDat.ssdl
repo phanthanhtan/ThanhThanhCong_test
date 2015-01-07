@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TTC_HopDongThueDatModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="TTC_HopDongThueDatModelStoreContainer">
+    <EntitySet Name="HopDong" EntityType="TTC_HopDongThueDatModel.Store.HopDong" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HopDong_ChiTiet" EntityType="TTC_HopDongThueDatModel.Store.HopDong_ChiTiet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Vung" EntityType="TTC_HopDongThueDatModel.Store.Vung" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="HopDong">
+    <Key>
+      <PropertyRef Name="MaHopDong" />
+    </Key>
+    <Property Name="MaHopDong" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen_A1" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="CMND_A1" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DiaChi_A1" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="SDT_A1" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="HoTen_A2" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="CMND_A2" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MoiQuanHeA" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DiaChi_A2" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="SDT_A2" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="HoTen_B1" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="CMND_B1" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DiaChi_B1" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="SDT_B1" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="HoTen_B2" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="CMND_B2" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MoiQuanHeB" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DiaChi_B2" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="SDT_B2" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HopDong_ChiTiet">
+    <Key>
+      <PropertyRef Name="MaHopDong_ChiTiet" />
+    </Key>
+    <Property Name="MaHopDong_ChiTiet" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MaHopDong" Type="int" Nullable="false" />
+    <Property Name="MaVung" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SoThua" Type="int" Nullable="false" />
+    <Property Name="DienTich" Type="float" Nullable="false" />
+    <Property Name="ViTriDat" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="LoaiDat" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="TinhTrangDat" Type="nvarchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Vung">
+    <Key>
+      <PropertyRef Name="MaVung" />
+    </Key>
+    <Property Name="MaVung" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="TenVung" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+</Schema>
