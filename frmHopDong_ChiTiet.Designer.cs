@@ -738,6 +738,7 @@
             this.btn_in.TabIndex = 71;
             this.btn_in.Text = "in hợp đồng";
             this.btn_in.UseVisualStyleBackColor = true;
+            this.btn_in.Click += new System.EventHandler(this.btn_in_Click);
             // 
             // txt_MaHopDong
             // 
