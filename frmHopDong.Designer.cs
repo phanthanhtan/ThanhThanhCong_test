@@ -30,9 +30,6 @@
         {
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.dataGridView_HopDong = new System.Windows.Forms.DataGridView();
-            this.btn_Them = new System.Windows.Forms.Button();
-            this.btn_ChiTiet = new System.Windows.Forms.Button();
-            this.btn_Xoa = new System.Windows.Forms.Button();
             this.MaHopDong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen_A1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen_B1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +38,9 @@
             this.DonGiaThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UngTruoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Them = new System.Windows.Forms.Button();
+            this.btn_ChiTiet = new System.Windows.Forms.Button();
+            this.btn_Xoa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HopDong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,35 +76,6 @@
             this.dataGridView_HopDong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_HopDong.Size = new System.Drawing.Size(984, 337);
             this.dataGridView_HopDong.TabIndex = 10;
-            // 
-            // btn_Them
-            // 
-            this.btn_Them.Location = new System.Drawing.Point(598, 355);
-            this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(75, 23);
-            this.btn_Them.TabIndex = 11;
-            this.btn_Them.Text = "Tạo mới";
-            this.btn_Them.UseVisualStyleBackColor = true;
-            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
-            // 
-            // btn_ChiTiet
-            // 
-            this.btn_ChiTiet.Location = new System.Drawing.Point(679, 355);
-            this.btn_ChiTiet.Name = "btn_ChiTiet";
-            this.btn_ChiTiet.Size = new System.Drawing.Size(75, 23);
-            this.btn_ChiTiet.TabIndex = 12;
-            this.btn_ChiTiet.Text = "Chi tiết";
-            this.btn_ChiTiet.UseVisualStyleBackColor = true;
-            this.btn_ChiTiet.Click += new System.EventHandler(this.btn_ChiTiet_Click);
-            // 
-            // btn_Xoa
-            // 
-            this.btn_Xoa.Location = new System.Drawing.Point(760, 355);
-            this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(75, 23);
-            this.btn_Xoa.TabIndex = 13;
-            this.btn_Xoa.Text = "Xóa";
-            this.btn_Xoa.UseVisualStyleBackColor = true;
             // 
             // MaHopDong
             // 
@@ -153,6 +124,36 @@
             this.UngTruoc.HeaderText = "Ứng trước";
             this.UngTruoc.Name = "UngTruoc";
             this.UngTruoc.ReadOnly = true;
+            // 
+            // btn_Them
+            // 
+            this.btn_Them.Location = new System.Drawing.Point(598, 355);
+            this.btn_Them.Name = "btn_Them";
+            this.btn_Them.Size = new System.Drawing.Size(75, 23);
+            this.btn_Them.TabIndex = 11;
+            this.btn_Them.Text = "Tạo mới";
+            this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
+            // 
+            // btn_ChiTiet
+            // 
+            this.btn_ChiTiet.Location = new System.Drawing.Point(679, 355);
+            this.btn_ChiTiet.Name = "btn_ChiTiet";
+            this.btn_ChiTiet.Size = new System.Drawing.Size(75, 23);
+            this.btn_ChiTiet.TabIndex = 12;
+            this.btn_ChiTiet.Text = "Chi tiết";
+            this.btn_ChiTiet.UseVisualStyleBackColor = true;
+            this.btn_ChiTiet.Click += new System.EventHandler(this.btn_ChiTiet_Click);
+            // 
+            // btn_Xoa
+            // 
+            this.btn_Xoa.Location = new System.Drawing.Point(760, 355);
+            this.btn_Xoa.Name = "btn_Xoa";
+            this.btn_Xoa.Size = new System.Drawing.Size(75, 23);
+            this.btn_Xoa.TabIndex = 13;
+            this.btn_Xoa.Text = "Xóa";
+            this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // frmHopDong
             // 
