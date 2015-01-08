@@ -14,6 +14,11 @@ namespace ThanhThanhCong_test
     
     public partial class HopDong
     {
+        public HopDong()
+        {
+            this.HopDong_ChiTiet = new HashSet<HopDong_ChiTiet>();
+        }
+    
         public int MaHopDong { get; set; }
         public string HoTen_A1 { get; set; }
         public string CMND_A1 { get; set; }
@@ -39,5 +44,7 @@ namespace ThanhThanhCong_test
         public double DonGiaThue { get; set; }
         public double TongTien { get; set; }
         public double UngTruoc { get; set; }
+    
+        public virtual ICollection<HopDong_ChiTiet> HopDong_ChiTiet { get; set; }
     }
 }

@@ -14,7 +14,14 @@ namespace ThanhThanhCong_test
     
     public partial class Vung
     {
+        public Vung()
+        {
+            this.HopDong_ChiTiet = new HashSet<HopDong_ChiTiet>();
+        }
+    
         public string MaVung { get; set; }
         public string TenVung { get; set; }
+    
+        public virtual ICollection<HopDong_ChiTiet> HopDong_ChiTiet { get; set; }
     }
 }
