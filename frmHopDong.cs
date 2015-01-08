@@ -59,10 +59,19 @@ namespace ThanhThanhCong_test
 
         private void btn_ChiTiet_Click(object sender, EventArgs e)
         {
-            string maHopDong = dataGridView_HopDong.SelectedRows[0].Cells["MaHopDong"].Value.ToString();
-            frmHopDong_ChiTiet frm = new frmHopDong_ChiTiet(maHopDong);
-            this.Visible = false;
-            frm.Visible = true;
+            string maHopDong = "";
+            try
+            {
+                maHopDong = dataGridView_HopDong.SelectedRows[0].Cells["MaHopDong"].Value.ToString();
+                frmHopDong_ChiTiet frm = new frmHopDong_ChiTiet(maHopDong);
+                this.Visible = false;
+                frm.Visible = true;
+            }
+            catch
+            {
+                if (maHopDong == "")
+                    MessageBox.Show("Chưa chọn hợp đồng/Hoặc không có hợp đồng để xem chi tiết!");
+            }
         }
     }
 }

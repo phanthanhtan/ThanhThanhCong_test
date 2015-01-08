@@ -231,5 +231,12 @@ namespace ThanhThanhCong_test
         {
             load_Vung();
         }
+
+        private void btn_TaoMoiHopDong_Click(object sender, EventArgs e)
+        {
+            frmHopDong_ChiTiet frm = new frmHopDong_ChiTiet();
+            this.Visible = false;
+            frm.Visible = true;
+        }
     }
 }

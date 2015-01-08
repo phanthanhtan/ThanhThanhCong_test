@@ -84,6 +84,12 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.dataGridView_ChiTiet = new System.Windows.Forms.DataGridView();
+            this.MaVung1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoThua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DienTich = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ViTriDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TinhTrangDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView_Vung = new System.Windows.Forms.DataGridView();
             this.MaVung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenVung = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,13 +102,10 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.MaVung1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoThua = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DienTich = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ViTriDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TinhTrangDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label34 = new System.Windows.Forms.Label();
+            this.btn_Vung = new System.Windows.Forms.Button();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ChiTiet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Vung)).BeginInit();
             this.SuspendLayout();
@@ -590,9 +593,9 @@
             this.label30.AutoSize = true;
             this.label30.Location = new System.Drawing.Point(910, 181);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(32, 13);
+            this.label30.Size = new System.Drawing.Size(95, 13);
             this.label30.TabIndex = 64;
-            this.label30.Text = "đồng";
+            this.label30.Text = "đồng <= Tổng tiền";
             // 
             // dataGridView_ChiTiet
             // 
@@ -614,6 +617,47 @@
             this.dataGridView_ChiTiet.Size = new System.Drawing.Size(588, 247);
             this.dataGridView_ChiTiet.TabIndex = 65;
             this.dataGridView_ChiTiet.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ChiTiet_CellValueChanged);
+            // 
+            // MaVung1
+            // 
+            this.MaVung1.FillWeight = 89.84324F;
+            this.MaVung1.HeaderText = "Mã vùng";
+            this.MaVung1.MaxInputLength = 50;
+            this.MaVung1.Name = "MaVung1";
+            this.MaVung1.ReadOnly = true;
+            // 
+            // SoThua
+            // 
+            this.SoThua.FillWeight = 73.84521F;
+            this.SoThua.HeaderText = "Số thửa";
+            this.SoThua.Name = "SoThua";
+            // 
+            // DienTich
+            // 
+            this.DienTich.FillWeight = 97.65729F;
+            this.DienTich.HeaderText = "Diện tích (ha)";
+            this.DienTich.Name = "DienTich";
+            // 
+            // ViTriDat
+            // 
+            this.ViTriDat.FillWeight = 119.3193F;
+            this.ViTriDat.HeaderText = "Vị trí đất";
+            this.ViTriDat.MaxInputLength = 200;
+            this.ViTriDat.Name = "ViTriDat";
+            // 
+            // LoaiDat
+            // 
+            this.LoaiDat.FillWeight = 97.5076F;
+            this.LoaiDat.HeaderText = "Loại đât (cao/thấp/...)";
+            this.LoaiDat.MaxInputLength = 50;
+            this.LoaiDat.Name = "LoaiDat";
+            // 
+            // TinhTrangDat
+            // 
+            this.TinhTrangDat.FillWeight = 121.8274F;
+            this.TinhTrangDat.HeaderText = "Tình trạng đất";
+            this.TinhTrangDat.MaxInputLength = 200;
+            this.TinhTrangDat.Name = "TinhTrangDat";
             // 
             // dataGridView_Vung
             // 
@@ -697,7 +741,7 @@
             // 
             // txt_MaHopDong
             // 
-            this.txt_MaHopDong.Location = new System.Drawing.Point(127, 532);
+            this.txt_MaHopDong.Location = new System.Drawing.Point(725, 252);
             this.txt_MaHopDong.Name = "txt_MaHopDong";
             this.txt_MaHopDong.Size = new System.Drawing.Size(100, 20);
             this.txt_MaHopDong.TabIndex = 73;
@@ -706,7 +750,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(47, 536);
+            this.label31.Location = new System.Drawing.Point(645, 255);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(74, 13);
             this.label31.TabIndex = 74;
@@ -733,47 +777,6 @@
             this.label33.TabIndex = 76;
             this.label33.Text = "(không phải là số, số < 0) sẽ mặc định là 0";
             // 
-            // MaVung1
-            // 
-            this.MaVung1.FillWeight = 89.84324F;
-            this.MaVung1.HeaderText = "Mã vùng";
-            this.MaVung1.MaxInputLength = 50;
-            this.MaVung1.Name = "MaVung1";
-            this.MaVung1.ReadOnly = true;
-            // 
-            // SoThua
-            // 
-            this.SoThua.FillWeight = 73.84521F;
-            this.SoThua.HeaderText = "Số thửa";
-            this.SoThua.Name = "SoThua";
-            // 
-            // DienTich
-            // 
-            this.DienTich.FillWeight = 97.65729F;
-            this.DienTich.HeaderText = "Diện tích (ha)";
-            this.DienTich.Name = "DienTich";
-            // 
-            // ViTriDat
-            // 
-            this.ViTriDat.FillWeight = 119.3193F;
-            this.ViTriDat.HeaderText = "Vị trí đất";
-            this.ViTriDat.MaxInputLength = 200;
-            this.ViTriDat.Name = "ViTriDat";
-            // 
-            // LoaiDat
-            // 
-            this.LoaiDat.FillWeight = 97.5076F;
-            this.LoaiDat.HeaderText = "Loại đât (cao/thấp/...)";
-            this.LoaiDat.MaxInputLength = 50;
-            this.LoaiDat.Name = "LoaiDat";
-            // 
-            // TinhTrangDat
-            // 
-            this.TinhTrangDat.FillWeight = 121.8274F;
-            this.TinhTrangDat.HeaderText = "Tình trạng đất";
-            this.TinhTrangDat.MaxInputLength = 200;
-            this.TinhTrangDat.Name = "TinhTrangDat";
-            // 
             // label34
             // 
             this.label34.AutoSize = true;
@@ -783,11 +786,43 @@
             this.label34.TabIndex = 77;
             this.label34.Text = "> 0";
             // 
+            // btn_Vung
+            // 
+            this.btn_Vung.Location = new System.Drawing.Point(39, 530);
+            this.btn_Vung.Name = "btn_Vung";
+            this.btn_Vung.Size = new System.Drawing.Size(256, 23);
+            this.btn_Vung.TabIndex = 78;
+            this.btn_Vung.Text = "Thêm vùng (Tới trang quản lý vùng)";
+            this.btn_Vung.UseVisualStyleBackColor = true;
+            this.btn_Vung.Click += new System.EventHandler(this.btn_Vung_Click);
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(908, 77);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(46, 13);
+            this.label35.TabIndex = 79;
+            this.label35.Text = ">= 2000";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.ForeColor = System.Drawing.Color.Red;
+            this.label36.Location = new System.Drawing.Point(393, 262);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(231, 13);
+            this.label36.TabIndex = 80;
+            this.label36.Text = "Ví dụ: diện tích nếu lẻ thì nhập 1,3   (1 phẩy 3) ";
+            // 
             // frmHopDong_ChiTiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 572);
+            this.Controls.Add(this.label36);
+            this.Controls.Add(this.label35);
+            this.Controls.Add(this.btn_Vung);
             this.Controls.Add(this.label34);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.label32);
@@ -942,5 +977,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiDat;
         private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrangDat;
         private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Button btn_Vung;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
     }
 }

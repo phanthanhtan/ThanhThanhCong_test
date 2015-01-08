@@ -41,6 +41,7 @@
             this.btn_Huy = new System.Windows.Forms.Button();
             this.btn_Luu = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
+            this.btn_TaoMoiHopDong = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Vung)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             this.dataGridView_Vung.ReadOnly = true;
             this.dataGridView_Vung.RowHeadersVisible = false;
             this.dataGridView_Vung.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Vung.Size = new System.Drawing.Size(254, 161);
+            this.dataGridView_Vung.Size = new System.Drawing.Size(254, 212);
             this.dataGridView_Vung.TabIndex = 0;
             this.dataGridView_Vung.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Vung_CellClick);
             // 
@@ -96,7 +97,7 @@
             // lb_MaVung
             // 
             this.lb_MaVung.AutoSize = true;
-            this.lb_MaVung.Location = new System.Drawing.Point(293, 97);
+            this.lb_MaVung.Location = new System.Drawing.Point(293, 83);
             this.lb_MaVung.Name = "lb_MaVung";
             this.lb_MaVung.Size = new System.Drawing.Size(52, 13);
             this.lb_MaVung.TabIndex = 3;
@@ -105,7 +106,7 @@
             // lb_TenVung
             // 
             this.lb_TenVung.AutoSize = true;
-            this.lb_TenVung.Location = new System.Drawing.Point(289, 123);
+            this.lb_TenVung.Location = new System.Drawing.Point(289, 109);
             this.lb_TenVung.Name = "lb_TenVung";
             this.lb_TenVung.Size = new System.Drawing.Size(56, 13);
             this.lb_TenVung.TabIndex = 4;
@@ -114,7 +115,7 @@
             // txt_MaVung
             // 
             this.txt_MaVung.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_MaVung.Location = new System.Drawing.Point(351, 94);
+            this.txt_MaVung.Location = new System.Drawing.Point(351, 80);
             this.txt_MaVung.MaxLength = 50;
             this.txt_MaVung.Name = "txt_MaVung";
             this.txt_MaVung.ReadOnly = true;
@@ -123,7 +124,7 @@
             // 
             // txt_TenVung
             // 
-            this.txt_TenVung.Location = new System.Drawing.Point(351, 120);
+            this.txt_TenVung.Location = new System.Drawing.Point(351, 106);
             this.txt_TenVung.MaxLength = 50;
             this.txt_TenVung.Name = "txt_TenVung";
             this.txt_TenVung.Size = new System.Drawing.Size(100, 20);
@@ -141,7 +142,7 @@
             // 
             // btn_Huy
             // 
-            this.btn_Huy.Location = new System.Drawing.Point(376, 175);
+            this.btn_Huy.Location = new System.Drawing.Point(376, 161);
             this.btn_Huy.Name = "btn_Huy";
             this.btn_Huy.Size = new System.Drawing.Size(75, 23);
             this.btn_Huy.TabIndex = 6;
@@ -151,7 +152,7 @@
             // 
             // btn_Luu
             // 
-            this.btn_Luu.Location = new System.Drawing.Point(376, 146);
+            this.btn_Luu.Location = new System.Drawing.Point(376, 132);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(75, 23);
             this.btn_Luu.TabIndex = 7;
@@ -161,7 +162,7 @@
             // 
             // btn_Thoat
             // 
-            this.btn_Thoat.Location = new System.Drawing.Point(296, 216);
+            this.btn_Thoat.Location = new System.Drawing.Point(296, 226);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(155, 23);
             this.btn_Thoat.TabIndex = 8;
@@ -169,11 +170,22 @@
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
+            // btn_TaoMoiHopDong
+            // 
+            this.btn_TaoMoiHopDong.Location = new System.Drawing.Point(296, 197);
+            this.btn_TaoMoiHopDong.Name = "btn_TaoMoiHopDong";
+            this.btn_TaoMoiHopDong.Size = new System.Drawing.Size(155, 23);
+            this.btn_TaoMoiHopDong.TabIndex = 9;
+            this.btn_TaoMoiHopDong.Text = "Tạo mới hợp đồng";
+            this.btn_TaoMoiHopDong.UseVisualStyleBackColor = true;
+            this.btn_TaoMoiHopDong.Click += new System.EventHandler(this.btn_TaoMoiHopDong_Click);
+            // 
             // frmVung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(468, 261);
+            this.Controls.Add(this.btn_TaoMoiHopDong);
             this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_Huy);
             this.Controls.Add(this.btn_Luu);
@@ -187,7 +199,7 @@
             this.Controls.Add(this.dataGridView_Vung);
             this.Name = "frmVung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vùng";
+            this.Text = "Quản lý vùng";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Vung)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -209,5 +221,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaVung;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenVung;
         private System.Windows.Forms.Button btn_Thoat;
+        private System.Windows.Forms.Button btn_TaoMoiHopDong;
     }
 }

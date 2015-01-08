@@ -3,7 +3,16 @@
   <EntityContainer Name="TTC_HopDongThueDatModelStoreContainer">
     <EntitySet Name="HopDong" EntityType="TTC_HopDongThueDatModel.Store.HopDong" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="HopDong_ChiTiet" EntityType="TTC_HopDongThueDatModel.Store.HopDong_ChiTiet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="TTC_HopDongThueDatModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Vung" EntityType="TTC_HopDongThueDatModel.Store.Vung" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_HopDong_ChiTiet_HopDong" Association="TTC_HopDongThueDatModel.Store.FK_HopDong_ChiTiet_HopDong">
+      <End Role="HopDong" EntitySet="HopDong" />
+      <End Role="HopDong_ChiTiet" EntitySet="HopDong_ChiTiet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HopDong_ChiTiet_Vung" Association="TTC_HopDongThueDatModel.Store.FK_HopDong_ChiTiet_Vung">
+      <End Role="Vung" EntitySet="Vung" />
+      <End Role="HopDong_ChiTiet" EntitySet="HopDong_ChiTiet" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="HopDong">
     <Key>
@@ -42,11 +51,21 @@
     <Property Name="MaHopDong_ChiTiet" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="MaHopDong" Type="int" Nullable="false" />
     <Property Name="MaVung" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="SoThua" Type="int" Nullable="false" />
+    <Property Name="SoThua" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="DienTich" Type="float" Nullable="false" />
     <Property Name="ViTriDat" Type="nvarchar" Nullable="false" MaxLength="200" />
     <Property Name="LoaiDat" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="TinhTrangDat" Type="nvarchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="Vung">
     <Key>
@@ -55,4 +74,28 @@
     <Property Name="MaVung" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="TenVung" Type="nvarchar" Nullable="false" MaxLength="50" />
   </EntityType>
+  <Association Name="FK_HopDong_ChiTiet_HopDong">
+    <End Role="HopDong" Type="TTC_HopDongThueDatModel.Store.HopDong" Multiplicity="1" />
+    <End Role="HopDong_ChiTiet" Type="TTC_HopDongThueDatModel.Store.HopDong_ChiTiet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HopDong">
+        <PropertyRef Name="MaHopDong" />
+      </Principal>
+      <Dependent Role="HopDong_ChiTiet">
+        <PropertyRef Name="MaHopDong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HopDong_ChiTiet_Vung">
+    <End Role="Vung" Type="TTC_HopDongThueDatModel.Store.Vung" Multiplicity="1" />
+    <End Role="HopDong_ChiTiet" Type="TTC_HopDongThueDatModel.Store.HopDong_ChiTiet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vung">
+        <PropertyRef Name="MaVung" />
+      </Principal>
+      <Dependent Role="HopDong_ChiTiet">
+        <PropertyRef Name="MaVung" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

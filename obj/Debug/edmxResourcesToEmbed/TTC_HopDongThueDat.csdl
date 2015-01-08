@@ -3,7 +3,16 @@
   <EntityContainer Name="TTC_HopDongThueDatEntities" p1:LazyLoadingEnabled="true">
     <EntitySet Name="HopDong" EntityType="TTC_HopDongThueDatModel.HopDong" />
     <EntitySet Name="HopDong_ChiTiet" EntityType="TTC_HopDongThueDatModel.HopDong_ChiTiet" />
+    <EntitySet Name="sysdiagrams" EntityType="TTC_HopDongThueDatModel.sysdiagrams" />
     <EntitySet Name="Vung" EntityType="TTC_HopDongThueDatModel.Vung" />
+    <AssociationSet Name="FK_HopDong_ChiTiet_HopDong" Association="TTC_HopDongThueDatModel.FK_HopDong_ChiTiet_HopDong">
+      <End Role="HopDong" EntitySet="HopDong" />
+      <End Role="HopDong_ChiTiet" EntitySet="HopDong_ChiTiet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HopDong_ChiTiet_Vung" Association="TTC_HopDongThueDatModel.FK_HopDong_ChiTiet_Vung">
+      <End Role="Vung" EntitySet="Vung" />
+      <End Role="HopDong_ChiTiet" EntitySet="HopDong_ChiTiet" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="HopDong">
     <Key>
@@ -34,6 +43,7 @@
     <Property Name="DonGiaThue" Type="Double" Nullable="false" />
     <Property Name="TongTien" Type="Double" Nullable="false" />
     <Property Name="UngTruoc" Type="Double" Nullable="false" />
+    <NavigationProperty Name="HopDong_ChiTiet" Relationship="TTC_HopDongThueDatModel.FK_HopDong_ChiTiet_HopDong" FromRole="HopDong" ToRole="HopDong_ChiTiet" />
   </EntityType>
   <EntityType Name="HopDong_ChiTiet">
     <Key>
@@ -42,11 +52,23 @@
     <Property Name="MaHopDong_ChiTiet" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="MaHopDong" Type="Int32" Nullable="false" />
     <Property Name="MaVung" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="SoThua" Type="Int32" Nullable="false" />
+    <Property Name="SoThua" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
     <Property Name="DienTich" Type="Double" Nullable="false" />
     <Property Name="ViTriDat" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
     <Property Name="LoaiDat" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
     <Property Name="TinhTrangDat" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="HopDong" Relationship="TTC_HopDongThueDatModel.FK_HopDong_ChiTiet_HopDong" FromRole="HopDong_ChiTiet" ToRole="HopDong" />
+    <NavigationProperty Name="Vung" Relationship="TTC_HopDongThueDatModel.FK_HopDong_ChiTiet_Vung" FromRole="HopDong_ChiTiet" ToRole="Vung" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Vung">
     <Key>
@@ -54,5 +76,30 @@
     </Key>
     <Property Name="MaVung" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
     <Property Name="TenVung" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="HopDong_ChiTiet" Relationship="TTC_HopDongThueDatModel.FK_HopDong_ChiTiet_Vung" FromRole="Vung" ToRole="HopDong_ChiTiet" />
   </EntityType>
+  <Association Name="FK_HopDong_ChiTiet_HopDong">
+    <End Role="HopDong" Type="TTC_HopDongThueDatModel.HopDong" Multiplicity="1" />
+    <End Role="HopDong_ChiTiet" Type="TTC_HopDongThueDatModel.HopDong_ChiTiet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HopDong">
+        <PropertyRef Name="MaHopDong" />
+      </Principal>
+      <Dependent Role="HopDong_ChiTiet">
+        <PropertyRef Name="MaHopDong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HopDong_ChiTiet_Vung">
+    <End Role="Vung" Type="TTC_HopDongThueDatModel.Vung" Multiplicity="1" />
+    <End Role="HopDong_ChiTiet" Type="TTC_HopDongThueDatModel.HopDong_ChiTiet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vung">
+        <PropertyRef Name="MaVung" />
+      </Principal>
+      <Dependent Role="HopDong_ChiTiet">
+        <PropertyRef Name="MaVung" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

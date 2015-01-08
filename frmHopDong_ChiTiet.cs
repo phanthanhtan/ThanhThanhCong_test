@@ -54,7 +54,7 @@ namespace ThanhThanhCong_test
             txt_SoVu.Text = hd.SoVu.ToString();
             txt_TuVu.Text = hd.TuVu;
             txt_DonGiaThue.Text = hd.DonGiaThue.ToString();
-            txt_TongTien.Text = hd.TongTien.ToString();
+            txt_TongTien.Text = hd.TongTien.ToString("0,0.00");
             txt_UngTruoc.Text = hd.UngTruoc.ToString();
             dataGridView_ChiTiet.Rows.Clear();
             foreach (HopDong_ChiTiet hd_ct in list_hd_ct)
@@ -226,6 +226,17 @@ namespace ThanhThanhCong_test
 
         private void btn_Luu_Click(object sender, EventArgs e)
         {
+            int check = 0;//kiểm tra trong dataGV có Diện tích nào nhập sai không? nhập vào ký tự khác số
+            int count = dataGridView_ChiTiet.RowCount;
+            try
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    float.Parse(dataGridView_ChiTiet.Rows[i].Cells["DienTich"].Value.ToString());
+                    check++;
+                }
+            }
+            catch { }
             if (txt_HoTen_A1.Text != "" &&
             txt_HoTen_A2.Text != "" &&
             txt_HoTen_B1.Text != "" &&
@@ -246,10 +257,11 @@ namespace ThanhThanhCong_test
             txt_MoiQuanHeB.Text != "" &&
             txt_KiemSoatVien.Text != "" &&
             txt_SoVu.Text != "" && int.Parse(txt_SoVu.Text) > 0 &&
-            txt_TuVu.Text != "" && int.Parse(txt_TuVu.Text) > 2000 &&
+            txt_TuVu.Text != "" && int.Parse(txt_TuVu.Text) >= 2000 &&
             txt_DonGiaThue.Text != "" && int.Parse(txt_DonGiaThue.Text) > 0 &&
             txt_TongTien.Text != "0" &&
-            txt_UngTruoc.Text != "")
+            txt_UngTruoc.Text != "" && int.Parse(txt_UngTruoc.Text) <= float.Parse(txt_TongTien.Text) &&
+            count > 0 && check == count)
             {
                 try
                 {
@@ -301,7 +313,7 @@ namespace ThanhThanhCong_test
                             {
                                 hd_ct.MaHopDong = hd_ma.MaHopDong;
                                 hd_ct.MaVung = dataGridView_ChiTiet.Rows[i].Cells["MaVung1"].Value.ToString();
-                                hd_ct.SoThua = int.Parse(dataGridView_ChiTiet.Rows[i].Cells["SoThua"].Value.ToString());
+                                hd_ct.SoThua = dataGridView_ChiTiet.Rows[i].Cells["SoThua"].Value.ToString();
                                 hd_ct.DienTich = float.Parse(dataGridView_ChiTiet.Rows[i].Cells["DienTich"].Value.ToString());
                                 hd_ct.ViTriDat = dataGridView_ChiTiet.Rows[i].Cells["ViTriDat"].Value.ToString();
                                 hd_ct.LoaiDat = dataGridView_ChiTiet.Rows[i].Cells["LoaiDat"].Value.ToString();
@@ -338,7 +350,7 @@ namespace ThanhThanhCong_test
                         {
                             hd_ct.MaHopDong = maHopDong;
                             hd_ct.MaVung = dataGridView_ChiTiet.Rows[i].Cells["MaVung1"].Value.ToString();
-                            hd_ct.SoThua = int.Parse(dataGridView_ChiTiet.Rows[i].Cells["SoThua"].Value.ToString());
+                            hd_ct.SoThua = dataGridView_ChiTiet.Rows[i].Cells["SoThua"].Value.ToString();
                             hd_ct.DienTich = float.Parse(dataGridView_ChiTiet.Rows[i].Cells["DienTich"].Value.ToString());
                             hd_ct.ViTriDat = dataGridView_ChiTiet.Rows[i].Cells["ViTriDat"].Value.ToString();
                             hd_ct.LoaiDat = dataGridView_ChiTiet.Rows[i].Cells["LoaiDat"].Value.ToString();
@@ -455,6 +467,13 @@ namespace ThanhThanhCong_test
             {
                 e.Handled = true;
             }
+        }
+
+        private void btn_Vung_Click(object sender, EventArgs e)
+        {
+            frmVung frm = new frmVung();
+            this.Visible = false;
+            frm.Visible = true;
         }
 
     }

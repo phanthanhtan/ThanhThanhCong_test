@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c29b7c890c814112b4ac09349e5b2ef5" Name="Diagram1">
+      <Diagram DiagramId="f05ed4ca3b4d485e967cf0ce3cb0e946" Name="Diagram1">
         <EntityTypeShape EntityType="TTC_HopDongThueDatModel.HopDong" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="TTC_HopDongThueDatModel.HopDong_ChiTiet" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
         <EntityTypeShape EntityType="TTC_HopDongThueDatModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />

@@ -70,7 +70,7 @@
             this.btn_Vung.Name = "btn_Vung";
             this.btn_Vung.Size = new System.Drawing.Size(139, 23);
             this.btn_Vung.TabIndex = 3;
-            this.btn_Vung.Text = "Vùng";
+            this.btn_Vung.Text = "Quản lý vùng";
             this.btn_Vung.UseVisualStyleBackColor = true;
             this.btn_Vung.Click += new System.EventHandler(this.btn_Vung_Click);
             // 

@@ -17,7 +17,7 @@ namespace ThanhThanhCong_test
         public int MaHopDong_ChiTiet { get; set; }
         public int MaHopDong { get; set; }
         public string MaVung { get; set; }
-        public int SoThua { get; set; }
+        public string SoThua { get; set; }
         public double DienTich { get; set; }
         public string ViTriDat { get; set; }
         public string LoaiDat { get; set; }
