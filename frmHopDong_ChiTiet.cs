@@ -127,7 +127,7 @@ namespace ThanhThanhCong_test
                 float sum = 0;
                 try
                 {
-                    sum = donGiaThue * DienTich;
+                    sum = donGiaThue * DienTich * float.Parse(txt_SoVu.Text.ToString());
                     if (sum < 0)
                         sum = 0;
                 }
