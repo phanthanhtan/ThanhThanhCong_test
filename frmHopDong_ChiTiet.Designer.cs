@@ -893,7 +893,7 @@
             this.Controls.Add(this.btn_Thoat);
             this.Name = "frmHopDong_ChiTiet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = " Chi tiết hợp đồng";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ChiTiet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Vung)).EndInit();
             this.ResumeLayout(false);
