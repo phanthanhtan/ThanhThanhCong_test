@@ -1047,6 +1047,21 @@ namespace ThanhThanhCong_test
             final2.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
             final2.Font.Name = "Times New Roman";
             final2.Font.Size = "12";
+
+            //quản lý in-------------------------------------------------------------------------
+            try
+            {
+                TTC_HopDongThueDatEntities entity = new TTC_HopDongThueDatEntities();
+                HopDong_in hd_in = new HopDong_in();
+                hd_in.MaHopDong = int.Parse(txt_MaHopDong.Text);
+                hd_in.UserID = Session.id.ToString();
+                hd_in.Time = DateTime.Now.ToString();
+                entity.HopDong_in.Add(hd_in);
+                entity.SaveChanges();
+            }
+            catch
+            {
+            }
         }
 
         private void txt_SoVu_KeyUp(object sender, KeyEventArgs e)
