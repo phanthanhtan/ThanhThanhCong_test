@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <Compile Include="HopDong_ChiTiet.cs">
       <DependentUpon>TTC_HopDongThueDat.tt</DependentUpon>
     </Compile>
+    <Compile Include="HopDong_in.cs">
+      <DependentUpon>TTC_HopDongThueDat.tt</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +92,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Session.cs" />
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>TTC_HopDongThueDat.tt</DependentUpon>
     </Compile>
@@ -101,9 +111,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TTC_HopDongThueDat.edmx</DependentUpon>
     </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>TTC_HopDongThueDat.tt</DependentUpon>
+    </Compile>
     <Compile Include="Vung.cs">
       <DependentUpon>TTC_HopDongThueDat.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHopDong.resx">
       <DependentUpon>frmHopDong.cs</DependentUpon>
     </EmbeddedResource>

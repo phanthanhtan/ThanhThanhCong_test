@@ -60,7 +60,7 @@
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(139, 23);
             this.btn_Thoat.TabIndex = 2;
-            this.btn_Thoat.Text = "Thoát";
+            this.btn_Thoat.Text = "Thoát (Đăng xuất)";
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 

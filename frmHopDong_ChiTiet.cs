@@ -15,6 +15,11 @@ namespace ThanhThanhCong_test
         public frmHopDong_ChiTiet()
         {
             InitializeComponent();
+            if (Session.permission != "1")
+            {
+                btn_Vung.Enabled = false;
+                btn_DanhSachHopDong.Enabled = false;
+            }
             loadAll_Vung();
             txt_MaHopDong.Text = "";
         }
@@ -54,7 +59,7 @@ namespace ThanhThanhCong_test
             txt_SoVu.Text = hd.SoVu.ToString();
             txt_TuVu.Text = hd.TuVu;
             txt_DonGiaThue.Text = hd.DonGiaThue.ToString();
-            txt_TongTien.Text = hd.TongTien.ToString("0,0.00");
+            txt_TongTien.Text = float.Parse(hd.TongTien).ToString("0,0");
             txt_UngTruoc.Text = hd.UngTruoc.ToString();
             dataGridView_ChiTiet.Rows.Clear();
             foreach (HopDong_ChiTiet hd_ct in list_hd_ct)
@@ -63,9 +68,16 @@ namespace ThanhThanhCong_test
             }
         }
 
-        protected override void OnClosing(CancelEventArgs e)
+        private void btn_DanhSachHopDong_Click(object sender, EventArgs e)
         {
             frmHopDong frm = new frmHopDong();
+            this.Visible = false;
+            frm.Visible = true;
+        }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            Main frm = new Main();
             this.Visible = false;
             frm.Visible = true;
         }
@@ -136,9 +148,9 @@ namespace ThanhThanhCong_test
                     txt_TongTien.Text = "0";
                 else
                     if(sum < 10)
-                        txt_TongTien.Text = sum.ToString("0.00");
+                        txt_TongTien.Text = sum.ToString("0");
                     else
-                        txt_TongTien.Text = sum.ToString("0,0.00");
+                        txt_TongTien.Text = sum.ToString("0,0");
             }
             else
             {
@@ -291,7 +303,7 @@ namespace ThanhThanhCong_test
                     hd.SoVu = int.Parse(txt_SoVu.Text);
                     hd.TuVu = txt_TuVu.Text;
                     hd.DonGiaThue = float.Parse(txt_DonGiaThue.Text);
-                    hd.TongTien = float.Parse(txt_TongTien.Text);
+                    hd.TongTien = txt_TongTien.Text;
                     hd.UngTruoc = float.Parse(txt_UngTruoc.Text);
                     TTC_HopDongThueDatEntities entity = new TTC_HopDongThueDatEntities();
                     if (txt_MaHopDong.Text == "") //tạo mới
@@ -314,7 +326,7 @@ namespace ThanhThanhCong_test
                                 hd_ct.MaHopDong = hd_ma.MaHopDong;
                                 hd_ct.MaVung = dataGridView_ChiTiet.Rows[i].Cells["MaVung1"].Value.ToString();
                                 hd_ct.SoThua = dataGridView_ChiTiet.Rows[i].Cells["SoThua"].Value.ToString();
-                                hd_ct.DienTich = float.Parse(dataGridView_ChiTiet.Rows[i].Cells["DienTich"].Value.ToString());
+                                hd_ct.DienTich = dataGridView_ChiTiet.Rows[i].Cells["DienTich"].Value.ToString();
                                 hd_ct.ViTriDat = dataGridView_ChiTiet.Rows[i].Cells["ViTriDat"].Value.ToString();
                                 hd_ct.LoaiDat = dataGridView_ChiTiet.Rows[i].Cells["LoaiDat"].Value.ToString();
                                 hd_ct.TinhTrangDat = dataGridView_ChiTiet.Rows[i].Cells["TinhTrangDat"].Value.ToString();
@@ -351,7 +363,7 @@ namespace ThanhThanhCong_test
                             hd_ct.MaHopDong = maHopDong;
                             hd_ct.MaVung = dataGridView_ChiTiet.Rows[i].Cells["MaVung1"].Value.ToString();
                             hd_ct.SoThua = dataGridView_ChiTiet.Rows[i].Cells["SoThua"].Value.ToString();
-                            hd_ct.DienTich = float.Parse(dataGridView_ChiTiet.Rows[i].Cells["DienTich"].Value.ToString());
+                            hd_ct.DienTich = dataGridView_ChiTiet.Rows[i].Cells["DienTich"].Value.ToString();
                             hd_ct.ViTriDat = dataGridView_ChiTiet.Rows[i].Cells["ViTriDat"].Value.ToString();
                             hd_ct.LoaiDat = dataGridView_ChiTiet.Rows[i].Cells["LoaiDat"].Value.ToString();
                             hd_ct.TinhTrangDat = dataGridView_ChiTiet.Rows[i].Cells["TinhTrangDat"].Value.ToString();
@@ -526,7 +538,7 @@ namespace ThanhThanhCong_test
                         txt_SDT_A1.Text, txt_SDT_A2.Text, txt_SDT_B1.Text, txt_SDT_B2.Text,
                         txt_MoiQuanHeA.Text, txt_MoiQuanHeB.Text,
                         txt_KiemSoatVien.Text, int.Parse(txt_SoVu.Text), int.Parse(txt_TuVu.Text),
-                        txt_DonGiaThue.Text, txt_TongTien.Text, txt_UngTruoc.Text);
+                        float.Parse(txt_DonGiaThue.Text).ToString("0,0"), txt_TongTien.Text, txt_UngTruoc.Text);
                     MessageBox.Show("Hoàn tất in hợp đồng.");
                     btn_in.Enabled = true;
                 }
@@ -726,7 +738,7 @@ namespace ThanhThanhCong_test
             Microsoft.Office.Interop.Excel.Range HAIBEN = oSheet.get_Range("A7", "I29");
             HAIBEN.Font.Name = "Times New Roman";
             HAIBEN.Font.Size = "12";
-            HAIBEN.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignLeft;
+            HAIBEN.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignJustify;
             HAIBEN.VerticalAlignment = Microsoft.Office.Interop.Excel.XlVAlign.xlVAlignTop;
 
             Microsoft.Office.Interop.Excel.Range dieu1_2 = oSheet.get_Range("B30", "B31");
@@ -836,12 +848,12 @@ namespace ThanhThanhCong_test
 
             Microsoft.Office.Interop.Excel.Range dieu4_2 = oSheet.get_Range("A" + row, "I" + row);
             dieu4_2.MergeCells = true;
-            dieu4_2.Value2 = donGiaThue + "đồng/ha/năm";
+            dieu4_2.Value2 = donGiaThue + " đồng/ha/năm";
             row++;
 
             Microsoft.Office.Interop.Excel.Range dieu4_3 = oSheet.get_Range("A" + row, "I" + row);
             dieu4_3.MergeCells = true;
-            dieu4_3.Value2 = "Tổng số tiền thuê đất: " + tongTien + "đồng.";
+            dieu4_3.Value2 = "Tổng số tiền thuê đất: " + tongTien + " đồng.";
             row++;
 
         //điều 5----------------------------------------------------------------------------------
@@ -987,7 +999,7 @@ namespace ThanhThanhCong_test
             Microsoft.Office.Interop.Excel.Range dieu2dieu8 = oSheet.get_Range("A" + dieu2_start, "I" + (row-1));
             dieu2dieu8.Font.Name = "Times New Roman";
             dieu2dieu8.Font.Size = "12";
-            dieu2dieu8.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignLeft;
+            dieu2dieu8.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignJustify;
             dieu2dieu8.VerticalAlignment = Microsoft.Office.Interop.Excel.XlVAlign.xlVAlignTop;
         //---------------------------------------------------------------------------------
             Microsoft.Office.Interop.Excel.Range UBND = oSheet.get_Range("A" + row, "I" + row);
@@ -1035,6 +1047,11 @@ namespace ThanhThanhCong_test
             final2.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
             final2.Font.Name = "Times New Roman";
             final2.Font.Size = "12";
+        }
+
+        private void txt_SoVu_KeyUp(object sender, KeyEventArgs e)
+        {
+            TongTien();
         }
 
     }

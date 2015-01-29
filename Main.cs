@@ -15,18 +15,18 @@ namespace ThanhThanhCong_test
         public Main()
         {
             InitializeComponent();
+            if (Session.permission != "1")
+            {
+                btn_DanhSachHopDong.Enabled = false;
+                btn_Vung.Enabled = false;
+            }
         }
 
         protected override void OnClosing(CancelEventArgs e)
         {
-            base.OnClosing(e);
-            //không thoát
-            if (MessageBox.Show("Bạn chắc chắn muốn thoát?!?", "Thoát chương trình", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
-            else
-                Application.Exit();
+            frmDangNhap frm = new frmDangNhap();
+            this.Visible = false;
+            frm.Visible = true;
         }
         private void btn_Thoat_Click(object sender, EventArgs e)
         {

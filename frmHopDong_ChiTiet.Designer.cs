@@ -106,17 +106,18 @@
             this.btn_Vung = new System.Windows.Forms.Button();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
+            this.btn_DanhSachHopDong = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ChiTiet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Vung)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Thoat
             // 
-            this.btn_Thoat.Location = new System.Drawing.Point(814, 531);
+            this.btn_Thoat.Location = new System.Drawing.Point(814, 530);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(165, 23);
             this.btn_Thoat.TabIndex = 0;
-            this.btn_Thoat.Text = "Quay lại danh sách hợp đồng";
+            this.btn_Thoat.Text = "Quay lại trang quản lý";
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
@@ -498,6 +499,7 @@
             this.txt_SoVu.Size = new System.Drawing.Size(179, 20);
             this.txt_SoVu.TabIndex = 56;
             this.txt_SoVu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SoVu_KeyPress);
+            this.txt_SoVu.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_SoVu_KeyUp);
             // 
             // txt_KiemSoatVien
             // 
@@ -816,11 +818,22 @@
             this.label36.TabIndex = 80;
             this.label36.Text = "Ví dụ: diện tích nếu lẻ thì nhập 1,3   (1 phẩy 3) ";
             // 
+            // btn_DanhSachHopDong
+            // 
+            this.btn_DanhSachHopDong.Location = new System.Drawing.Point(643, 530);
+            this.btn_DanhSachHopDong.Name = "btn_DanhSachHopDong";
+            this.btn_DanhSachHopDong.Size = new System.Drawing.Size(165, 23);
+            this.btn_DanhSachHopDong.TabIndex = 81;
+            this.btn_DanhSachHopDong.Text = "Danh sách hợp đồng";
+            this.btn_DanhSachHopDong.UseVisualStyleBackColor = true;
+            this.btn_DanhSachHopDong.Click += new System.EventHandler(this.btn_DanhSachHopDong_Click);
+            // 
             // frmHopDong_ChiTiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 572);
+            this.Controls.Add(this.btn_DanhSachHopDong);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.btn_Vung);
@@ -981,5 +994,6 @@
         private System.Windows.Forms.Button btn_Vung;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Button btn_DanhSachHopDong;
     }
 }

@@ -12,18 +12,13 @@ namespace ThanhThanhCong_test
     using System;
     using System.Collections.Generic;
     
-    public partial class HopDong_ChiTiet
+    public partial class HopDong_in
     {
-        public int MaHopDong_ChiTiet { get; set; }
+        public int ID { get; set; }
         public int MaHopDong { get; set; }
-        public string MaVung { get; set; }
-        public string SoThua { get; set; }
-        public string DienTich { get; set; }
-        public string ViTriDat { get; set; }
-        public string LoaiDat { get; set; }
-        public string TinhTrangDat { get; set; }
+        public string UserID { get; set; }
+        public string Time { get; set; }
     
         public virtual HopDong HopDong { get; set; }
-        public virtual Vung Vung { get; set; }
     }
 }
