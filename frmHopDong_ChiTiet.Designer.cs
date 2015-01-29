@@ -107,6 +107,9 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.btn_DanhSachHopDong = new System.Windows.Forms.Button();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.btn_SLin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ChiTiet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Vung)).BeginInit();
             this.SuspendLayout();
@@ -744,7 +747,7 @@
             // 
             // txt_MaHopDong
             // 
-            this.txt_MaHopDong.Location = new System.Drawing.Point(725, 252);
+            this.txt_MaHopDong.Location = new System.Drawing.Point(902, 252);
             this.txt_MaHopDong.Name = "txt_MaHopDong";
             this.txt_MaHopDong.Size = new System.Drawing.Size(100, 20);
             this.txt_MaHopDong.TabIndex = 73;
@@ -753,7 +756,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(645, 255);
+            this.label31.Location = new System.Drawing.Point(822, 250);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(74, 13);
             this.label31.TabIndex = 74;
@@ -764,7 +767,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.ForeColor = System.Drawing.Color.Red;
-            this.label32.Location = new System.Drawing.Point(662, 211);
+            this.label32.Location = new System.Drawing.Point(648, 237);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(278, 13);
             this.label32.TabIndex = 75;
@@ -774,7 +777,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.ForeColor = System.Drawing.Color.Red;
-            this.label33.Location = new System.Drawing.Point(664, 237);
+            this.label33.Location = new System.Drawing.Point(648, 262);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(207, 13);
             this.label33.TabIndex = 76;
@@ -828,11 +831,42 @@
             this.btn_DanhSachHopDong.UseVisualStyleBackColor = true;
             this.btn_DanhSachHopDong.Click += new System.EventHandler(this.btn_DanhSachHopDong_Click);
             // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(668, 205);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(51, 13);
+            this.label37.TabIndex = 82;
+            this.label37.Text = "Số lần in:";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(725, 205);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(41, 13);
+            this.label38.TabIndex = 83;
+            this.label38.Text = "label38";
+            // 
+            // btn_SLin
+            // 
+            this.btn_SLin.Location = new System.Drawing.Point(829, 200);
+            this.btn_SLin.Name = "btn_SLin";
+            this.btn_SLin.Size = new System.Drawing.Size(75, 23);
+            this.btn_SLin.TabIndex = 84;
+            this.btn_SLin.Text = "Chi tiết";
+            this.btn_SLin.UseVisualStyleBackColor = true;
+            this.btn_SLin.Click += new System.EventHandler(this.btn_SLin_Click);
+            // 
             // frmHopDong_ChiTiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 572);
+            this.Controls.Add(this.btn_SLin);
+            this.Controls.Add(this.label38);
+            this.Controls.Add(this.label37);
             this.Controls.Add(this.btn_DanhSachHopDong);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.label35);
@@ -995,5 +1029,8 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Button btn_DanhSachHopDong;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Button btn_SLin;
     }
 }

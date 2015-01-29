@@ -15,3 +15,4 @@ F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\obj\Debug\ThanhThanh
 F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\obj\Debug\ThanhThanhCong_test.frmHopDong_ChiTiet.resources
 F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\obj\Debug\ThanhThanhCong_test.csproj.ResolveComReference.cache
 F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\obj\Debug\ThanhThanhCong_test.frmDangNhap.resources
+F:\DCT\windows form\ThanhThanhCong_test\ThanhThanhCong_test\obj\Debug\ThanhThanhCong_test.frmHopDong_in.resources

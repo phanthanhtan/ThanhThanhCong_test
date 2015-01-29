@@ -15,6 +15,9 @@ namespace ThanhThanhCong_test
         public frmHopDong_ChiTiet()
         {
             InitializeComponent();
+            label37.Visible = false;
+            label38.Visible = false;
+            btn_SLin.Visible = false;
             if (Session.permission != "1")
             {
                 btn_Vung.Enabled = false;
@@ -66,6 +69,19 @@ namespace ThanhThanhCong_test
             {
                 dataGridView_ChiTiet.Rows.Add(hd_ct.MaVung, hd_ct.SoThua, hd_ct.DienTich, hd_ct.ViTriDat, hd_ct.LoaiDat, hd_ct.TinhTrangDat);
             }
+            SLin();
+        }
+        public void SLin()
+        {
+            TTC_HopDongThueDatEntities entity = new TTC_HopDongThueDatEntities();
+            int mhd = int.Parse(txt_MaHopDong.Text);
+            List<HopDong_in> list_hd_in = entity.HopDong_in.Where(item => item.MaHopDong == mhd).ToList();
+            int count = list_hd_in.Count;
+            label38.Text = count.ToString();
+            if (count == 0)
+                btn_SLin.Enabled = false;
+            else
+                btn_SLin.Enabled = true;
         }
 
         private void btn_DanhSachHopDong_Click(object sender, EventArgs e)
@@ -531,7 +547,7 @@ namespace ThanhThanhCong_test
                 {
                     btn_in.Enabled = false;
                     frmHopDong_ChiTiet excel = new frmHopDong_ChiTiet();
-                    excel.Export(dataGridView_ChiTiet, "Hop dong thue dat",
+                    excel.Export(txt_MaHopDong.Text, dataGridView_ChiTiet, "Hop dong thue dat",
                         txt_HoTen_A1.Text, txt_HoTen_A2.Text, txt_HoTen_B1.Text, txt_HoTen_B2.Text,
                         txt_CMND_A1.Text, txt_CMND_A2.Text, txt_CMND_B1.Text, txt_CMND_B2.Text,
                         txt_DiaChi_A1.Text, txt_DiaChi_A2.Text, txt_DiaChi_B1.Text, txt_DiaChi_B2.Text,
@@ -541,6 +557,7 @@ namespace ThanhThanhCong_test
                         float.Parse(txt_DonGiaThue.Text).ToString("0,0"), txt_TongTien.Text, txt_UngTruoc.Text);
                     MessageBox.Show("Hoàn tất in hợp đồng.");
                     btn_in.Enabled = true;
+                    SLin();
                 }
                 catch
                 {
@@ -554,7 +571,7 @@ namespace ThanhThanhCong_test
                 else
                     MessageBox.Show("Chưa nhập đủ thông tin hoặc thông tin sai cấu trúc!");
         }
-        public void Export(DataGridView dtGV, String sheetName,
+        public void Export(string maHopDong, DataGridView dtGV, String sheetName,
             string hoTen_A1, string hoTen_A2, string hoTen_B1, string hoTen_B2,
             string cMND_A1, string cMND_A2, string cMND_B1, string cMND_B2,
             string diaChi_A1, string diaChi_A2, string diaChi_B1, string diaChi_B2,
@@ -1053,11 +1070,14 @@ namespace ThanhThanhCong_test
             {
                 TTC_HopDongThueDatEntities entity = new TTC_HopDongThueDatEntities();
                 HopDong_in hd_in = new HopDong_in();
-                hd_in.MaHopDong = int.Parse(txt_MaHopDong.Text);
-                hd_in.UserID = Session.id.ToString();
-                hd_in.Time = DateTime.Now.ToString();
-                entity.HopDong_in.Add(hd_in);
-                entity.SaveChanges();
+                if (maHopDong != "")    //tạo mới chưa có mã hợp đồng trong csdl (vì không lưu vẫn in được) => thiếu khóa ngoại => không lưu                
+                {
+                    hd_in.MaHopDong = int.Parse(maHopDong);
+                    hd_in.UserID = Session.id.ToString();
+                    hd_in.Time = DateTime.Now.ToString();
+                    entity.HopDong_in.Add(hd_in);
+                    entity.SaveChanges();
+                }
             }
             catch
             {
@@ -1067,6 +1087,13 @@ namespace ThanhThanhCong_test
         private void txt_SoVu_KeyUp(object sender, KeyEventArgs e)
         {
             TongTien();
+        }
+
+        private void btn_SLin_Click(object sender, EventArgs e)
+        {
+            frmHopDong_in frm = new frmHopDong_in(txt_MaHopDong.Text);
+            this.Visible = false;
+            frm.Visible = true;
         }
 
     }
