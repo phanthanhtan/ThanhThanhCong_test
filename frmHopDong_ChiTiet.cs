@@ -1065,6 +1065,14 @@ namespace ThanhThanhCong_test
             final2.Font.Name = "Times New Roman";
             final2.Font.Size = "12";
 
+            //CenterHorizontally canh giữa trang thêo chiều ngang
+            //CenterVertically canh giữa trang thêo chiều dọc
+            head.Worksheet.PageSetup.CenterHorizontally = true;
+
+            //head.Worksheet.Rows[3][3].PageBreak = Microsoft.Office.Interop.Excel.XlPageBreak.xlPageBreakManual;
+            //head.Worksheet.Columns[9][9].PageBreak = Microsoft.Office.Interop.Excel.XlPageBreak.xlPageBreakManual;
+            //head.Worksheet.Columns.Cells[9][9].PageBreak = Microsoft.Office.Interop.Excel.XlPageBreak.xlPageBreakManual;
+            
             //quản lý in-------------------------------------------------------------------------
             try
             {
