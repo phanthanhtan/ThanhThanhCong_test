@@ -554,7 +554,7 @@ namespace ThanhThanhCong_test
                         txt_SDT_A1.Text, txt_SDT_A2.Text, txt_SDT_B1.Text, txt_SDT_B2.Text,
                         txt_MoiQuanHeA.Text, txt_MoiQuanHeB.Text,
                         txt_KiemSoatVien.Text, int.Parse(txt_SoVu.Text), int.Parse(txt_TuVu.Text),
-                        float.Parse(txt_DonGiaThue.Text).ToString("0,0"), txt_TongTien.Text, txt_UngTruoc.Text);
+                        float.Parse(txt_DonGiaThue.Text).ToString("0,0"), txt_TongTien.Text, float.Parse(txt_UngTruoc.Text).ToString("0,0"));
                     MessageBox.Show("Hoàn tất in hợp đồng.");
                     btn_in.Enabled = true;
                     SLin();
