@@ -1039,6 +1039,14 @@ namespace ThanhThanhCong_test
                 //CenterHorizontally canh giữa trang thêo chiều ngang
                 //CenterVertically canh giữa trang thêo chiều dọc
                 head.Worksheet.PageSetup.CenterHorizontally = true;
+                
+                // set print - cần đến chữ nào chỉnh chữ đó, mặc định là in đến J
+                //oSheet.VPageBreaks.Add(final2.Range["M1"]);
+                oSheet.PageSetup.PrintArea = "A1: J" + row;
+                oSheet.PageSetup.Orientation = Microsoft.Office.Interop.Excel.XlPageOrientation.xlPortrait;
+                oSheet.PageSetup.Zoom = false;
+                oSheet.PageSetup.FitToPagesTall = 2;
+                oSheet.PageSetup.FitToPagesWide = 1;
 
                 //quản lý in-------------------------------------------------------------------------
                 try
