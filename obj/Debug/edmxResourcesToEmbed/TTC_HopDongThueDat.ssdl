@@ -15,10 +15,6 @@
       <End Role="Vung" EntitySet="Vung" />
       <End Role="HopDong_ChiTiet" EntitySet="HopDong_ChiTiet" />
     </AssociationSet>
-    <AssociationSet Name="FK_HopDong_in_HopDong" Association="TTC_HopDongThueDatModel.Store.FK_HopDong_in_HopDong">
-      <End Role="HopDong" EntitySet="HopDong" />
-      <End Role="HopDong_in" EntitySet="HopDong_in" />
-    </AssociationSet>
   </EntityContainer>
   <EntityType Name="HopDong">
     <Key>
@@ -118,18 +114,6 @@
       </Principal>
       <Dependent Role="HopDong_ChiTiet">
         <PropertyRef Name="MaVung" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_HopDong_in_HopDong">
-    <End Role="HopDong" Type="TTC_HopDongThueDatModel.Store.HopDong" Multiplicity="1" />
-    <End Role="HopDong_in" Type="TTC_HopDongThueDatModel.Store.HopDong_in" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="HopDong">
-        <PropertyRef Name="MaHopDong" />
-      </Principal>
-      <Dependent Role="HopDong_in">
-        <PropertyRef Name="MaHopDong" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

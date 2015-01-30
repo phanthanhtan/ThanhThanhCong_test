@@ -741,7 +741,7 @@
             this.btn_in.Name = "btn_in";
             this.btn_in.Size = new System.Drawing.Size(75, 23);
             this.btn_in.TabIndex = 71;
-            this.btn_in.Text = "in hợp đồng";
+            this.btn_in.Text = "Lưu và in";
             this.btn_in.UseVisualStyleBackColor = true;
             this.btn_in.Click += new System.EventHandler(this.btn_in_Click);
             // 
