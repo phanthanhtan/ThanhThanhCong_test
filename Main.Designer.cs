@@ -32,11 +32,12 @@
             this.btn_DanhSachHopDong = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.btn_Vung = new System.Windows.Forms.Button();
+            this.btn_XemSoLanin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Them
             // 
-            this.btn_Them.Location = new System.Drawing.Point(72, 50);
+            this.btn_Them.Location = new System.Drawing.Point(72, 29);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(139, 23);
             this.btn_Them.TabIndex = 0;
@@ -46,7 +47,7 @@
             // 
             // btn_DanhSachHopDong
             // 
-            this.btn_DanhSachHopDong.Location = new System.Drawing.Point(72, 94);
+            this.btn_DanhSachHopDong.Location = new System.Drawing.Point(72, 73);
             this.btn_DanhSachHopDong.Name = "btn_DanhSachHopDong";
             this.btn_DanhSachHopDong.Size = new System.Drawing.Size(139, 23);
             this.btn_DanhSachHopDong.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // btn_Thoat
             // 
-            this.btn_Thoat.Location = new System.Drawing.Point(72, 182);
+            this.btn_Thoat.Location = new System.Drawing.Point(72, 205);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(139, 23);
             this.btn_Thoat.TabIndex = 2;
@@ -66,7 +67,7 @@
             // 
             // btn_Vung
             // 
-            this.btn_Vung.Location = new System.Drawing.Point(72, 140);
+            this.btn_Vung.Location = new System.Drawing.Point(72, 163);
             this.btn_Vung.Name = "btn_Vung";
             this.btn_Vung.Size = new System.Drawing.Size(139, 23);
             this.btn_Vung.TabIndex = 3;
@@ -74,11 +75,22 @@
             this.btn_Vung.UseVisualStyleBackColor = true;
             this.btn_Vung.Click += new System.EventHandler(this.btn_Vung_Click);
             // 
+            // btn_XemSoLanin
+            // 
+            this.btn_XemSoLanin.Location = new System.Drawing.Point(72, 117);
+            this.btn_XemSoLanin.Name = "btn_XemSoLanin";
+            this.btn_XemSoLanin.Size = new System.Drawing.Size(139, 23);
+            this.btn_XemSoLanin.TabIndex = 4;
+            this.btn_XemSoLanin.Text = "Xem số lần in HĐ";
+            this.btn_XemSoLanin.UseVisualStyleBackColor = true;
+            this.btn_XemSoLanin.Click += new System.EventHandler(this.btn_XemSoLanin_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btn_XemSoLanin);
             this.Controls.Add(this.btn_Vung);
             this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_DanhSachHopDong);
@@ -96,5 +108,6 @@
         private System.Windows.Forms.Button btn_DanhSachHopDong;
         private System.Windows.Forms.Button btn_Thoat;
         private System.Windows.Forms.Button btn_Vung;
+        private System.Windows.Forms.Button btn_XemSoLanin;
     }
 }

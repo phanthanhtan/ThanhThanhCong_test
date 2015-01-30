@@ -75,6 +75,12 @@
     <Compile Include="frmHopDong_in.Designer.cs">
       <DependentUpon>frmHopDong_in.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHopDong_in_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHopDong_in_Main.Designer.cs">
+      <DependentUpon>frmHopDong_in_Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHopDong_in.resx">
       <DependentUpon>frmHopDong_in.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHopDong_in_Main.resx">
+      <DependentUpon>frmHopDong_in_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVung.resx">
       <DependentUpon>frmVung.cs</DependentUpon>

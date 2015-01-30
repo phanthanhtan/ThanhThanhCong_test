@@ -18,6 +18,7 @@ namespace ThanhThanhCong_test
             if (Session.permission != "1")
             {
                 btn_DanhSachHopDong.Enabled = false;
+                btn_XemSoLanin.Enabled = false;
                 btn_Vung.Enabled = false;
             }
         }
@@ -50,6 +51,13 @@ namespace ThanhThanhCong_test
         private void btn_DanhSachHopDong_Click(object sender, EventArgs e)
         {
             frmHopDong frm = new frmHopDong();
+            this.Visible = false;
+            frm.Visible = true;
+        }
+
+        private void btn_XemSoLanin_Click(object sender, EventArgs e)
+        {
+            frmHopDong_in_Main frm = new frmHopDong_in_Main();
             this.Visible = false;
             frm.Visible = true;
         }

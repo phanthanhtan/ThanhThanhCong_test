@@ -32,6 +32,7 @@
             this.dataGridView_HopDong_in = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_XemSoLanin = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HopDong_in)).BeginInit();
@@ -55,7 +56,7 @@
             this.dataGridView_HopDong_in.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Time});
-            this.dataGridView_HopDong_in.Location = new System.Drawing.Point(15, 25);
+            this.dataGridView_HopDong_in.Location = new System.Drawing.Point(12, 25);
             this.dataGridView_HopDong_in.Name = "dataGridView_HopDong_in";
             this.dataGridView_HopDong_in.ReadOnly = true;
             this.dataGridView_HopDong_in.RowHeadersVisible = false;
@@ -80,9 +81,19 @@
             this.label2.TabIndex = 84;
             this.label2.Text = "label1";
             // 
+            // btn_XemSoLanin
+            // 
+            this.btn_XemSoLanin.Location = new System.Drawing.Point(12, 238);
+            this.btn_XemSoLanin.Name = "btn_XemSoLanin";
+            this.btn_XemSoLanin.Size = new System.Drawing.Size(165, 23);
+            this.btn_XemSoLanin.TabIndex = 85;
+            this.btn_XemSoLanin.Text = "Trang xem số lần in HĐ";
+            this.btn_XemSoLanin.UseVisualStyleBackColor = true;
+            this.btn_XemSoLanin.Click += new System.EventHandler(this.btn_XemSoLanin_Click);
+            // 
             // ID
             // 
-            this.ID.HeaderText = "Tên đăng nhập";
+            this.ID.HeaderText = "Mã HĐ - Tên đăng nhập";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             // 
@@ -97,13 +108,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(372, 273);
+            this.Controls.Add(this.btn_XemSoLanin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView_HopDong_in);
             this.Controls.Add(this.btn_DanhSachHopDong);
             this.Name = "frmHopDong_in";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hợp đồng - Số lượng in";
+            this.Text = "Hợp đồng - Số lần in";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HopDong_in)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -116,6 +128,7 @@
         private System.Windows.Forms.DataGridView dataGridView_HopDong_in;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_XemSoLanin;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Time;
 
